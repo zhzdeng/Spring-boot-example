@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- <link rel="stylesheet" type="text/css" media="all" href="../../css/stsm.css" th:href="@{/css/stsm.css}"/> -->
+  </head>
+
+  <body>
+
+    <form action="/index" method="post">
+      <form>
+        <select name="cities">
+          <option value="GZ">广州</option>
+          <option value="BJ">北京</option>
+          <option value="SZ">深圳</option>
+          <option value="SH">上海</option>
+        </select>
+      </form>
+
+      <form>
+        <select name="recipe">
+          <option value="waterFish">水煮鱼</option>
+          <option value="pekingDuck">北京烤鸭</option>
+          <option value="steamedEgg">蒸水蛋</option>
+          <option value="darkFood">黑暗料理</option>
+        </select>
+      </form>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+
+  </body>
+
+</html>
