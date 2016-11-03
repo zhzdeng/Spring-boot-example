@@ -3,10 +3,24 @@
 
 ##当前进展
 
-最简单的spring-boot应用
-能访问
+2016-11-04
+
+简单整合了 /index /menu，还没有编写对应的控制逻辑
+
 `localhost:8080`
+
+`localhost:8080/menu`
+
 `localhost:8080/cuisine_detail/deng`
+
+2016-11-01
+
+最简单的spring-boot应用
+能访问  
+`localhost:8080`  
+`localhost:8080/cuisine_detail/deng`
+
+
 
 ##任务一: 按 MVC 应用设计流程，建立一个应用原型
 

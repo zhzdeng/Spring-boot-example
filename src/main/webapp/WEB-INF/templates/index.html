@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="./css/stsm.css" th:href="@{/css/stsm.css}"/>
+    <script type="text/javascript" src="./js/index.js" th:src="@{/js/index.js}"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+  </head>
+
+<body>
+    <form action="/index" method="post">
+        <select id="city_list" name="cities">
+          <option value="BJ">北京</option>
+          <option value="TJ">天津</option>
+          <option value="SH">上海</option>
+          <option value="CQ">重庆</option>
+          <option value="SJZ">石家庄</option>
+          <option value="TY">太原</option>
+          <option value="HEHT">呼尔浩特</option>
+          <option value="SY">沈阳</option>
+          <option value="CC">长春</option>
+          <option value="HEB">哈尔冰</option>
+          <option value="NJ">南京</option>
+          <option value="HZ">杭州</option>
+          <option value="HF">合肥</option>
+        </select>
+      <input id="submit" type="submit" value="选择城市" />
+    </form>
+
+    <img src="./images/img1.png" class="no1" />
+
+    <div class="div-2">
+        <p class="p-1">推荐菜式</p>
+        <br />
+        <div class="div-2.1">
+          <div class="images">
+            <img src="./images/img2.png" class="img_2 recommend" th:src="@{{img_path1}}" />
+          </div>
+          <div class="images">
+            <img src="./images/img3.png" class="img_3 recommend" th:src="@{${img_path2}}" />
+          </div>
+        </div>
+        <div class="p-2">
+            <div class="name" th:text="${recommendName1}">北京烤鸭</div>
+            <div class="name" th:text="${recommendName2}">炸酱面</div>
+        </div>
+
+        <div class="div-2.2">
+          <div class="images">
+            <img src="./images/img4.png" class="img_4 recommend" th:src="@{${img_path3}}" />
+          </div>
+          <div class="images">
+            <img src="./images/img5.png" class="img_5" />
+          </div>
+        </div>
+        <div class="p-3">
+            <div class="name" th:text="${recommendName3}">卤煮</div>
+            <div class="name">更多美味</div>
+        </div>
+
+    </div>
+
+    <div class="div-1" border-right="1" solid="#000">
+      <img src="./images/ordering.png" class="no6" />
+      <div id="button_div">
+        <button id="login">Login</button>
+      </div>
+    </div>
+</body>
+
+</html>

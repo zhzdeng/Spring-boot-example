@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	 <head>
+    	<title th:text="${name}">Cuisine Detail</title>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<link href="cuisine_detail.css" type="text/css" rel="stylesheet" media="screen" />
+    </head>
+    <body>
+
+        <ul id = "nav">
+            <li><a href="index.html">Recipe Home</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Poultry">Poultry</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Seafood">Seafood</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Vegetable">Vegetables</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Fruit">Fruits</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Cereal">Cereals</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Snack">Snack</a></li>
+        </ul>
+
+        <div id = "blank"></div>
+
+        <div id = "board">
+            <p>
+                <span th:text="${name}">北京烤鸭</span><br />
+            </p>
+        </div>
+
+
+
+        <div id="food-main">
+            <img src="./food1.jpg" alt="food1" />
+            <p th:text="${introduction}">烤鸭是具有世界声誉的北京著名菜式，起源于中国南北朝时期，《食珍录》中已记有炙鸭，在当时是宫廷食品。用料为优质肉食鸭北京鸭，果木炭火烤制，色泽红润，肉质肥而不腻，外脆里嫩。北京烤鸭分为两大流派，而北京最著名的烤鸭店也即是两派的代表。它以色泽红艳，肉质细嫩，味道醇厚，肥而不腻的特色，被誉为“天下美味”。</p>
+            <hr />
+            <p>单价：<span th:text="${price}">38元</span></p>
+            <p>折扣活动：<span th:text="${discount}">新用户立减5元</span></p>
+        </div>
+
+        <div id="footer">
+            <p>Get our app | Contact with us</p>
+        </div>
+
+    </body>
+</html>

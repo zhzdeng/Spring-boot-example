@@ -2,6 +2,8 @@ package tmy.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -9,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class IndexController {
 
 	// 返回主页
-    @RequestMapping(value = {"/", "/index"}, method=RequestMethod.GET)
+    @GetMapping({"/", "/index"})
     public String getIndex(Model model) {
         return "index";
     }
 
-   @RequestMapping(value = "/index", method=RequestMethod.POST)
+   @PostMapping("/index")
    public String postIndex(Model model) {
 	   return "redirect:/detail";
    }

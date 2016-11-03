@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="/js/menu.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="menu.css" />
+    <title>Menu</title>
+</head>
+
+<body>
+    <h1>菜单</h1>
+    <form method="post">
+        <table id="table">
+            <tr>
+                <th>菜名</th>
+                <th>数量</th>
+            </tr>
+            <tr>
+                <th th:text="${name}">水煮鱼</th>
+                <th>
+                    <input type="button" class="minus button back" value="-" />
+                    <input type="number" class="value" name="${name}" value="0" min="0" />
+                    <input type="button" class="plus button next" value="+" />
+                </th>
+            </tr>
+            <tr>
+                <th th:text="${name}">北京烤鸭</th>
+                <th>
+                    <input type="button" class="minus button back" value="-" />
+                    <input type="number" class="value" name="${name}" value="1" min="0" />
+                    <input type="button" class="plus button next" value="+" />
+                </th>
+            </tr>
+        </table>
+        <input id="submit" type="submit" class="button" value="下单" />
+    </form>
+
+</body>
+</html>

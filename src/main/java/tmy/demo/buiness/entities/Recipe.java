@@ -1,7 +1,10 @@
 package tmy.demo.buiness.entities;
+
+import javax.persistence.Entity;
+
 //
 //
-//@Entity
+@Entity
 public class Recipe {
 //	@Id
 //	@GenriatedValue(strategy=GenerationType.AUTO)

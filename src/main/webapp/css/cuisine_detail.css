@@ -1,0 +1,110 @@
+body {
+	font-family: Georgia, Garamond, serif;
+	font-size: 11pt;
+	padding: 0px;
+	margin: 0px;
+}
+
+ul#nav {
+    background-color: #C0C0C0;
+	position: fixed;
+	margin: 0 auto;
+	height: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+ul#nav li {
+	display: inline;
+	line-height: 50px;
+	margin-right: 70px;
+}
+
+#nav a {
+	font-size: 12pt;
+	color: black;
+	text-decoration: none;
+}
+
+#nav a:hover {
+	background-color: gray;
+}
+
+#board p {
+	background-color: gray;
+	font-weight: bold;
+	text-align: center;
+	line-height: 400%;
+}
+
+#board a {
+	margin-top: 100px;
+	font-family: Verdana, serif;
+	font-size: 60px;
+	color: black;
+	text-decoration: none;
+
+}
+
+a:hover {
+	background-color: #C0C0C0;
+}
+
+#board span {
+	font-family: "Century Gothic";
+	font-size: 150px;
+	color: yellow;
+	letter-spacing: 15px;
+	line-height: 150%;
+}
+
+p {
+	text-align: center;
+}
+
+#blank{height:30px;clear:both;overflow:hidden;display:block;overflow:hidden;}
+
+
+
+#food-sidebar {
+	width: 300px;
+	margin-right: 40px;
+	margin-bottom: 5px;
+	float: left;
+}
+
+#food-main {
+	width: 620px;
+	margin-bottom: 20px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+#food-sidebar img {
+	width: 280px;
+	height: 280px;
+	margin: 0;
+}
+
+#food-main img {
+	width: 550px;
+}
+
+#footer {
+	clear: both;
+	background-color: #C0C0C0;
+	line-height: 50px;
+}
+
+h1 {
+	text-align: center;
+}
+
+hr {
+	width: 85%;
+}
+
+#food-sidebar p {
+	font-size: 15pt;
+}
