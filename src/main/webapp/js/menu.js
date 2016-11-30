@@ -4,17 +4,20 @@
 
 
 window.onload =function() {
+    price = parseFloat($('#price').val());
     $('.minus').click(function () {
         var count =  $(this).siblings('.value').val();
         count = parseInt(count);
         if (isNaN(count)) {
             count = 0;
             $(this).siblings('.value').val(0);
+            $(this).siblings('#totalPrice').val(count * price);
         }
 
         if (count != 0) {
             count --;
             $(this).siblings('.value').val(count);
+            $(this).siblings('#totalPrice').val(count * price);
         }
     })
     $('.plus').click(function () {
@@ -23,5 +26,6 @@ window.onload =function() {
         if (count === NaN) count = 0;
         count++;
         $(this).siblings('.value').val(count);
+        $(this).siblings('#totalPrice').val(count * price);
     })
 }

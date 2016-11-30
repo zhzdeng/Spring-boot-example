@@ -16,23 +16,27 @@
             <tr>
                 <th>菜名</th>
                 <th>数量</th>
+                <th>总价</th>
+                <th name="${food.price}" id="price">单价</th>
             </tr>
             <tr>
                 <th th:text="${name}">水煮鱼</th>
                 <th>
+                    <input type="text" name="foodName" />
                     <input type="button" class="minus button back" value="-" />
-                    <input type="number" class="value" name="${name}" value="0" min="0" />
+                    <input type="number" class="value" name="number" value="0" min="0" />
                     <input type="button" class="plus button next" value="+" />
+                    <input type="number" name="totalPrice" id="totalPrice" readonly="readonly" value="0" />
                 </th>
             </tr>
-            <tr>
+            <!-- <tr>
                 <th th:text="${name}">北京烤鸭</th>
                 <th>
                     <input type="button" class="minus button back" value="-" />
                     <input type="number" class="value" name="${name}" value="1" min="0" />
                     <input type="button" class="plus button next" value="+" />
                 </th>
-            </tr>
+            </tr> -->
         </table>
         <input id="submit" type="submit" class="button" value="下单" />
     </form>

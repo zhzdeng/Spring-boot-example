@@ -22,7 +22,7 @@
 
         <div id = "board">
             <p>
-                <span th:text="${name}">北京烤鸭</span><br />
+                <span th:text="${food.name}">北京烤鸭</span><br />
             </p>
         </div>
 
@@ -30,10 +30,10 @@
 
         <div id="food-main">
             <img src="./food1.jpg" alt="food1" />
-            <p th:text="${introduction}">烤鸭是具有世界声誉的北京著名菜式，起源于中国南北朝时期，《食珍录》中已记有炙鸭，在当时是宫廷食品。用料为优质肉食鸭北京鸭，果木炭火烤制，色泽红润，肉质肥而不腻，外脆里嫩。北京烤鸭分为两大流派，而北京最著名的烤鸭店也即是两派的代表。它以色泽红艳，肉质细嫩，味道醇厚，肥而不腻的特色，被誉为“天下美味”。</p>
+            <p>介绍：<span th:text="${food.introduction}">烤鸭是具有世界声誉的北京著名菜式</span></p>
             <hr />
-            <p>单价：<span th:text="${price}">38元</span></p>
-            <p>折扣活动：<span th:text="${discount}">新用户立减5元</span></p>
+            <p>单价：<span th:text="${food.price}">38元</span></p>
+            <p>折扣活动：<span th:text="${food.discount}">新用户立减5元</span></p>
         </div>
 
         <div id="footer">

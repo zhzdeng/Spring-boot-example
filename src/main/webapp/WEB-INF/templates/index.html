@@ -30,19 +30,20 @@
       <input id="submit" type="submit" value="选择城市" />
     </form>
 
-    <img src="./images/img1.png" class="no1" />
+    <img src="./images/headline.png" class="no1" />
 
     <div class="div-2">
         <p class="p-1">推荐菜式</p>
         <br />
         <div class="div-2.1">
           <div class="images">
-            <img src="./images/img2.png" class="img_2 recommend" th:src="@{{img_path1}}" />
+            <img src="./images/default.png" class="img_2 recommend" th:src="@{./images/${#lists.toList(city).get(0)}+'.png'}" />
           </div>
           <div class="images">
-            <img src="./images/img3.png" class="img_3 recommend" th:src="@{${img_path2}}" />
+            <img src="./images/default.png" class="img_3 recommend" th:src="@{./images/${city.foodNameList.get(1)}+'.png'}" />
           </div>
         </div>
+
         <div class="p-2">
             <div class="name" th:text="${recommendName1}">北京烤鸭</div>
             <div class="name" th:text="${recommendName2}">炸酱面</div>
@@ -50,10 +51,10 @@
 
         <div class="div-2.2">
           <div class="images">
-            <img src="./images/img4.png" class="img_4 recommend" th:src="@{${img_path3}}" />
+            <img src="./images/default.png" class="img_4 recommend" th:src="@{./images/${#city.get[0]}}" />
           </div>
           <div class="images">
-            <img src="./images/img5.png" class="img_5" />
+            <img src="./images/default.png" class="img_5" th:src="@{./images/${city.foodNameList.get(3)}+'.png'}"/>
           </div>
         </div>
         <div class="p-3">
@@ -69,6 +70,13 @@
         <button id="login">Login</button>
       </div>
     </div>
+
+    <tr th:each="foodName:${city}">
+          <img src="./images/default.png" th:src="@{./images/${foodName}}" />
+          <img src="./images/default.png" th:src="@{./images/${foodName}+'.png'}" />
+          <img src="./images/default.png" th:src="@{./images/${foodName}+'.png'}" />
+          <img src="./images/default.png" th:src="@{./images/${foodName}+'.png'}" />
+    </tr>
 </body>
 
 </html>
