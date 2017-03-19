@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" media="all" href="./css/login.css" th:href="@{/css/login.css}"/>
+    <script type="text/javascript" src="./javascript/login.js" th:src="@{/javascript/login.js}"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <div id = "content">
+        <h1>用户登录</h1>
+        <form method="post">
+            <div>
+                <div class="text">用户名</div>
+                <input type = "text" id="userName" />
+            </div>
+            <br/>
+            <div>
+                <div class="text">密码</div>
+                <input type="password" id ="userPassword" />
+            </div>
+            <br/>
+            <input type="submit" value="登录" class="button" id="login" />
+        </form>
+    </div>
+</body>
+</html>

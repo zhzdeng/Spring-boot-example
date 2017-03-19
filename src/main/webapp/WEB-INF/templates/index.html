@@ -5,7 +5,7 @@
     <title>首页</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" media="all" href="./css/stsm.css" th:href="@{/css/stsm.css}"/>
-    <script type="text/javascript" src="./js/index.js" th:src="@{/js/index.js}"></script>
+    <script type="text/javascript" src="./javascript/index.js" th:src="@{/js/index.js}"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 
   </head>
@@ -30,53 +30,45 @@
       <input id="submit" type="submit" value="选择城市" />
     </form>
 
-    <img src="./images/headline.png" class="no1" />
+    <img src="./image/img1.png" class="no1" th:src="@{/images/headline.png}" />
 
     <div class="div-2">
         <p class="p-1">推荐菜式</p>
         <br />
         <div class="div-2.1">
-          <div class="images">
-            <img src="./images/default.png" class="img_2 recommend" th:src="@{./images/${#lists.toList(city).get(0)}+'.png'}" />
+          <div class="image">
+            <img src="./image/img2.png" class="img_2 recommend" th:src="@{/images/QingfengBaoZi.png}" th:name="${food1.name}"/>
           </div>
-          <div class="images">
-            <img src="./images/default.png" class="img_3 recommend" th:src="@{./images/${city.foodNameList.get(1)}+'.png'}" />
+          <div class="image">
+            <img src="./image/img3.png" class="img_3 recommend" th:src="@{/images/PakingDuck.png}" th:name="${food2.name}"/>
           </div>
         </div>
-
         <div class="p-2">
-            <div class="name" th:text="${recommendName1}">北京烤鸭</div>
-            <div class="name" th:text="${recommendName2}">炸酱面</div>
+            <div class="name" th:text="${food1.name}">北京烤鸭</div>
+            <div class="name" th:text="${food2.name}">炸酱面</div>
         </div>
 
         <div class="div-2.2">
-          <div class="images">
-            <img src="./images/default.png" class="img_4 recommend" th:src="@{./images/${#city.get[0]}}" />
+          <div class="image">
+            <img src="./image/img4.png" class="img_4 recommend" th:src="@{/images/HotPot.png}" th:name="${food3.name}"/>
           </div>
-          <div class="images">
-            <img src="./images/default.png" class="img_5" th:src="@{./images/${city.foodNameList.get(3)}+'.png'}"/>
+          <div class="image">
+            <img src="./image/img5.png" class="img_5" th:src="@{/images/LambChop.png}" />
           </div>
         </div>
         <div class="p-3">
-            <div class="name" th:text="${recommendName3}">卤煮</div>
+            <div class="name" th:text="${food3.name}">卤煮</div>
             <div class="name">更多美味</div>
         </div>
 
     </div>
 
     <div class="div-1" border-right="1" solid="#000">
-      <img src="./images/ordering.png" class="no6" />
+      <img src="./image/ordering.png" class="no6" th:src="@{/images/ordering.png}" />
       <div id="button_div">
         <button id="login">Login</button>
       </div>
     </div>
-
-    <tr th:each="foodName:${city}">
-          <img src="./images/default.png" th:src="@{./images/${foodName}}" />
-          <img src="./images/default.png" th:src="@{./images/${foodName}+'.png'}" />
-          <img src="./images/default.png" th:src="@{./images/${foodName}+'.png'}" />
-          <img src="./images/default.png" th:src="@{./images/${foodName}+'.png'}" />
-    </tr>
 </body>
 
 </html>

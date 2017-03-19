@@ -24,12 +24,13 @@
             <p>
                 <span th:text="${food.name}">北京烤鸭</span><br />
             </p>
+            <a href="/menu"><p>下单</p></a>
         </div>
 
 
 
         <div id="food-main">
-            <img src="./food1.jpg" alt="food1" />
+            <img src="./food1.jpg" alt="food1" th:src="${food.pictureURI}" />
             <p>介绍：<span th:text="${food.introduction}">烤鸭是具有世界声誉的北京著名菜式</span></p>
             <hr />
             <p>单价：<span th:text="${food.price}">38元</span></p>

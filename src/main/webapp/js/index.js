@@ -1,10 +1,12 @@
 window.onload = function () {
 
     $('#login').click(function() {
-        window.location.href = "hello.html";
+        window.location.href = "login.html";
     })
 
     $('.recommend').click(function() {
-        window.location.href = "detail.html";
+        var dt = event.target.name;
+        window.location.href = "cuisine_detail/detail.html?name="+dt;
+
     })
 }
